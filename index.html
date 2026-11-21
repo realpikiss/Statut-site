@@ -239,6 +239,7 @@
     <form id="beta" novalidate>
       <label for="email" class="sr" style="position:absolute;left:-9999px">Ton courriel</label>
       <input id="email" name="email" type="email" autocomplete="email" placeholder="ton@courriel.com" required>
+      <input name="site" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
       <div class="seg" role="radiogroup" aria-label="Ton téléphone">
         <label><input type="radio" name="telephone" value="iphone" checked> iPhone</label>
         <label><input type="radio" name="telephone" value="android"> Android</label>
@@ -255,8 +256,10 @@
 <script>
   // Lien public TestFlight : dès qu'il est actif, tous les boutons y mènent directement (aucun formulaire).
   var TESTFLIGHT_URL = "";
-  // Adresse d'un formulaire qui accepte un POST JSON (ex. table Supabase). Vide = mode démo : rien n'est envoyé.
+  // URL de l'application Web Google Apps Script (tools/liste-attente.gs), finit par /exec.
+  // Vide = mode démo : rien n'est envoyé.
   var FORM_ENDPOINT = "";
+  var ENDPOINT_OK = /^https:\/\/script\.google\.com\/macros\/s\/[\w-]+\/exec$/.test(FORM_ENDPOINT);
 
   if (/^https:\/\/testflight\.apple\.com\//.test(TESTFLIGHT_URL)) {
     document.querySelectorAll('.js-cta').forEach(function (a) { a.href = TESTFLIGHT_URL; a.rel = 'noopener'; });
@@ -268,12 +271,15 @@
     msg.className = 'msg';
     var email = String(new FormData(form).get('email') || '').trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { msg.className = 'msg err'; msg.textContent = 'Entre un courriel valide.'; return; }
-    if (!FORM_ENDPOINT) { msg.textContent = 'Mode démo : rien n’a été envoyé.'; return; }
+    if (!ENDPOINT_OK) { msg.textContent = 'Mode démo : rien n’a été envoyé.'; return; }
     var btn = form.querySelector('button');
     btn.disabled = true; btn.textContent = 'Envoi…';
-    fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email, telephone: new FormData(form).get('telephone') }) })
-      .then(function (r) { if (!r.ok) throw new Error(); form.reset(); msg.textContent = 'C’est noté ! Le lien arrive bientôt dans ta boîte.'; })
+    var data = new FormData(form);
+    // Google Apps Script ne répond pas aux requêtes « préalables » (CORS) : envoi simple en
+    // texte, réponse non lisible (no-cors). Une panne réseau donne quand même une erreur.
+    fetch(FORM_ENDPOINT, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify({ email: email, telephone: data.get('telephone'), site: data.get('site') || '' }) })
+      .then(function () { form.reset(); msg.textContent = 'C’est noté ! Le lien arrive bientôt dans ta boîte.'; })
       .catch(function () { msg.className = 'msg err'; msg.textContent = 'L’envoi a échoué. Réessaie dans un instant.'; })
       .then(function () { btn.disabled = false; btn.textContent = 'Recevoir le lien'; });
   });
