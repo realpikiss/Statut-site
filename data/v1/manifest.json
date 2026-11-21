@@ -2,9 +2,9 @@
   "format": 1,
   "files": {
     "rules.json": {
-      "sha256": "14cc43a8302e9b7a8fab2549539517956c802db3ec1f932518819676fdde9700",
-      "version": 1,
-      "verified_on": "2026-11-20"
+      "sha256": "22466950230f21d8a8b31065362adc3048a1cedf1a51c8fd724c68e63aa1d40a",
+      "version": 2,
+      "verified_on": "2026-11-21"
     },
     "countries.json": {
       "sha256": "a9c6c945e2f7816cef7919292f04fc3309d5c262e5d4619ccbf355e9eb7ea30b",

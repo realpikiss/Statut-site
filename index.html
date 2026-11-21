@@ -4,282 +4,278 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Statut — Ne rate plus jamais l'expiration de ton permis</title>
+<meta name="description" content="App iPhone gratuite pour les étudiants et travailleurs étrangers au Canada : Statut suit ton permis, ton PGWP, ton passeport et ton NAS, te prévient à temps et te dit quoi faire. En français, sans compte.">
 <meta name="theme-color" content="#0E6E5C">
-<meta name="description" content="Statut suit les dates de ton permis d'études, permis de travail, PGWP, passeport et NAS, et te dit quoi faire ensuite. Bêta sur iPhone : inscris-toi pour tester.">
+<meta property="og:title" content="Statut — Ne rate plus jamais l'expiration de ton permis">
+<meta property="og:description" content="Gratuit, en français, sans compte. Tes dates restent sur ton iPhone.">
 <style>
   :root{
-    --bg:#F2F2F7; --card:#FFFFFF; --ink:#000000; --ink2:#3C3C43; --muted:#5F5F66;
-    --line:#E5E5EA; --accent:#0E6E5C; --accent-ink:#0A5547; --warn:#B4410C; --warn-soft:#FDBA74;
-    --font:-apple-system,BlinkMacSystemFont,'SF Pro Text',Inter,system-ui,sans-serif;
-    --mono:ui-monospace,'SF Mono',Menlo,monospace;
+    --bg:#F5F5F7; --card:#FFFFFF; --ink:#0B0B0C; --ink2:#3C3C43; --muted:#62626A; --line:#E3E3E8;
+    --accent:#0E6E5C; --accent-ink:#0A5547; --accent-soft:#E3F1EE; --warn:#B4410C; --warn-dot:#EA580C; --warn-soft:#FFF4EA;
+    --dark:#0C0C0E; --dark-card:#1C1C1E; --panel:#0C0C0E; --on-dark:#F5F5F7; --on-dark2:#A1A1AA;
+    --font:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,"Segoe UI",Roboto,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--bg:#0C0C0E;--card:#1C1C1E;--ink:#F5F5F7;--ink2:#D1D1D6;--muted:#A1A1AA;--line:#2C2C2E;
+      --accent:#34B39A;--accent-ink:#5FCDB6;--accent-soft:#12302A;--warn:#FDBA74;--warn-soft:#2A1B10;--panel:#1C1C1E;--dark-card:#2C2C2E}
   }
   *{box-sizing:border-box}
-  html,body{margin:0}
-  body{background:var(--bg);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased;line-height:1.45}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.5;-webkit-font-smoothing:antialiased}
   a{color:var(--accent)}
-  a:hover{color:var(--accent-ink)}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-  header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
-  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.4px}
-  .logo{width:32px;height:32px;border-radius:9px;background:var(--accent);display:flex;align-items:center;justify-content:center}
-  .pill{font-size:13px;font-weight:600;color:var(--ink2);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+  @media (min-width:640px){.wrap{padding:0 24px}}
 
-  .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:40px 0 64px}
-  .eyebrow{font-size:14px;font-weight:700;color:var(--warn);margin:0 0 12px}
-  h1{font-size:clamp(36px,5.2vw,58px);line-height:1.02;letter-spacing:-1.6px;margin:0 0 18px;font-weight:800}
-  .lead{font-size:19px;color:var(--ink2);max-width:520px;margin:0 0 28px}
-  .cta{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 26px;border-radius:26px;background:#000;color:#fff;font-weight:600;font-size:16px;text-decoration:none}
-  .cta:hover{color:#fff;background:#1C1C1E}
-  .note{font-size:13px;color:var(--muted);margin-top:12px}
+  /* Barre du haut, collante */
+  .top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.4px;color:var(--ink);text-decoration:none}
+  .logo{width:30px;height:30px;border-radius:8px;background:#0E6E5C;display:grid;place-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 26px;border-radius:999px;background:var(--ink);color:var(--bg);font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;font-family:inherit}
+  .btn:hover{opacity:.88}
+  .btn.small{min-height:40px;padding:0 18px;font-size:14px}
+  .btn.accent{background:#0E6E5C;color:#fff}
 
-  /* phone */
-  .phone{justify-self:center;width:300px;height:610px;border-radius:46px;background:#000;padding:10px;box-shadow:0 30px 80px rgba(0,0,0,.18)}
-  .screen{width:100%;height:100%;border-radius:37px;background:var(--bg);overflow:hidden;padding:44px 12px 0;position:relative}
-  .s-date{font-size:10px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.3px}
+  /* Hero */
+  .hero{display:grid;gap:40px;align-items:center;padding:48px 0 56px}
+  @media (min-width:900px){.hero{grid-template-columns:1.15fr .85fr;padding:72px 0 80px}}
+  .eyebrow{display:inline-block;font-size:13px;font-weight:700;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:6px 12px;margin:0 0 18px}
+  h1{font-size:clamp(38px,6vw,64px);line-height:1;letter-spacing:-.04em;margin:0 0 20px;font-weight:800}
+  .lead{font-size:clamp(17px,2vw,20px);color:var(--ink2);max-width:540px;margin:0 0 28px}
+  .checks{display:flex;flex-wrap:wrap;gap:8px 18px;margin:18px 0 0;padding:0;list-style:none;font-size:14px;font-weight:600;color:var(--ink2)}
+  .checks li::before{content:"✓ ";color:var(--accent);font-weight:800}
+
+  /* Téléphone */
+  .phone{justify-self:center;position:relative;width:min(300px,100%);aspect-ratio:300/612;border-radius:46px;background:#000;padding:10px;box-shadow:0 40px 90px rgba(0,0,0,.22)}
+  .screen{height:100%;border-radius:37px;background:#F2F2F7;overflow:hidden;padding:46px 12px 0;color:#000}
+  .s-date{font-size:10px;font-weight:600;color:#6B6B70;text-transform:uppercase;letter-spacing:.3px}
   .s-title{font-size:26px;font-weight:800;letter-spacing:-.6px;margin:0 0 10px}
   .s-card{background:#fff;border-radius:18px;padding:14px}
-  .s-flag{display:flex;align-items:center;gap:6px;font-size:10.5px;font-weight:700;color:var(--warn)}
+  .s-flag{display:flex;align-items:center;gap:6px;font-size:10.5px;font-weight:700;color:#B4410C}
   .dot{width:7px;height:7px;border-radius:4px;background:#EA580C}
   .s-row{display:flex;justify-content:space-between;align-items:flex-end;margin-top:10px}
   .s-h{font-size:15px;font-weight:700;line-height:1.2}
   .s-num{font-size:50px;font-weight:800;letter-spacing:-2.4px;line-height:.9}
-  .s-num small{font-size:12px;font-weight:600;color:var(--muted);letter-spacing:0}
+  .s-num small{font-size:12px;font-weight:600;color:#6B6B70;letter-spacing:0}
   .track{position:relative;height:18px;margin-top:12px}
-  .track .base{position:absolute;left:0;right:0;top:8px;height:2px;background:var(--line)}
-  .track .done{position:absolute;left:0;width:11%;top:8px;height:2px;background:#1C1C1E}
-  .track .now{position:absolute;left:11%;top:2px;width:14px;height:14px;border-radius:7px;background:#fff;border:3px solid #EA580C}
-  .track .end{position:absolute;right:0;top:5px;width:8px;height:8px;border-radius:4px;border:2px solid #1C1C1E;background:#fff}
-  .ticks{display:flex;justify-content:space-between;font-family:var(--mono);font-size:9px;color:var(--muted);margin-top:2px}
+  .track i{position:absolute;display:block}
+  .t-base{left:0;right:0;top:8px;height:2px;background:#E5E5EA}
+  .t-done{left:0;width:11%;top:8px;height:2px;background:#1C1C1E}
+  .t-now{left:11%;top:2px;width:14px;height:14px;border-radius:7px;background:#fff;border:3px solid #EA580C}
+  .t-end{right:0;top:5px;width:8px;height:8px;border-radius:4px;border:2px solid #1C1C1E;background:#fff}
+  .ticks{display:flex;justify-content:space-between;font-family:var(--mono);font-size:9px;color:#6B6B70;margin-top:2px}
   .wallet{position:relative;height:200px;margin-top:14px}
   .w{position:absolute;left:0;right:0;height:150px;border-radius:14px;color:#fff;padding:12px 14px;display:flex;justify-content:space-between;font-size:12px;font-weight:700}
   .w span{font-family:var(--mono);font-weight:500;font-size:10px}
+  .notif{position:absolute;left:-28px;right:-28px;top:18%;background:rgba(250,250,252,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:20px;padding:12px 14px;box-shadow:0 18px 40px rgba(0,0,0,.18);display:flex;gap:10px;color:#000;animation:drop 1s .6s both cubic-bezier(.2,.8,.2,1)}
+  .notif .ic{flex:none;width:34px;height:34px;border-radius:9px;background:#0E6E5C;display:grid;place-items:center}
+  .notif b{font-size:13px}.notif p{margin:2px 0 0;font-size:13px;line-height:1.3}
+  .notif .when{margin-left:auto;font-size:11px;color:#6B6B70}
+  @keyframes drop{from{opacity:0;transform:translateY(-18px) scale(.96)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.notif{animation:none}}
+  @media (max-width:420px){.notif{left:-8px;right:-8px}}
 
-  section{padding:56px 0}
-  h2{font-size:clamp(28px,3.6vw,38px);letter-spacing:-.9px;line-height:1.1;margin:0 0 12px;font-weight:800}
-  .sub{font-size:17px;color:var(--ink2);max-width:640px;margin:0 0 32px}
-  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-  .feature{background:#fff;border-radius:20px;padding:22px}
-  .feature h3{font-size:18px;margin:12px 0 6px;letter-spacing:-.3px}
-  .feature p{margin:0;color:var(--ink2);font-size:15px}
-  .ico{width:36px;height:36px;border-radius:10px;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--accent)}
+  /* Enjeu */
+  .stake{background:var(--panel);color:var(--on-dark);border-radius:28px;padding:32px 24px;display:grid;gap:20px}
+  @media (min-width:800px){.stake{grid-template-columns:auto 1fr;align-items:center;padding:40px 44px;gap:40px}}
+  .stake .big{font-size:clamp(48px,8vw,76px);font-weight:800;letter-spacing:-.04em;line-height:.95;color:#FDBA74}
+  .stake p{margin:0;font-size:18px;color:var(--on-dark2)}
+  .stake p strong{color:var(--on-dark)}
+  .stake small{display:block;margin-top:10px;font-size:13px}
+  .stake small a{color:var(--on-dark2)}
 
-  .chain{background:#fff;border-radius:22px;padding:8px 22px}
-  .step{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
-  .step:last-child{border-bottom:0}
-  .step .k{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted);padding-top:3px}
-  .step b{display:block;font-size:17px;letter-spacing:-.2px}
-  .step span{color:var(--ink2);font-size:15px}
+  section{padding:64px 0}
+  h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.03em;line-height:1.08;margin:0 0 12px;font-weight:800}
+  .sub{font-size:18px;color:var(--ink2);max-width:620px;margin:0 0 32px}
+  .grid{display:grid;gap:14px}
+  @media (min-width:700px){.grid.c3{grid-template-columns:repeat(3,1fr)}.grid.c2{grid-template-columns:repeat(2,1fr)}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px}
+  .card h3{font-size:19px;letter-spacing:-.3px;margin:6px 0 6px}
+  .card p{margin:0;color:var(--ink2)}
+  .step{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--accent)}
+  .tag{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.4px;color:var(--warn)}
+  .rule h3{font-size:21px}
+  .rule .src{display:inline-block;margin-top:12px;font-size:13px;font-weight:600}
+  .crisis{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .crisis span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:9px 14px;font-size:14px;font-weight:600}
 
-  .signup{background:#0C0C0E;color:#fff;border-radius:28px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-  .signup h2{color:#fff}
-  .signup .sub{color:#C7C7CC;margin-bottom:0}
-  form{display:flex;flex-direction:column;gap:14px}
-  label{font-size:13px;font-weight:600;color:#D1D1D6;display:flex;flex-direction:column;gap:6px}
-  input,select{height:48px;border-radius:12px;border:1px solid #3A3A3C;background:#1C1C1E;color:#fff;font:inherit;font-size:16px;padding:0 14px}
-  input:focus,select:focus{outline:2px solid #fff;outline-offset:1px}
-  fieldset{border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
-  legend{font-size:13px;font-weight:600;color:#D1D1D6;margin-bottom:6px;padding:0}
-  .choices{display:flex;flex-wrap:wrap;gap:8px}
-  .choice{position:relative}
-  .choice input{position:absolute;opacity:0;width:1px;height:1px}
-  .choice span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:22px;border:1px solid #3A3A3C;background:#1C1C1E;font-size:14px;font-weight:600;cursor:pointer}
-  .choice input:checked + span{background:#fff;color:#000;border-color:#fff}
-  .choice input:focus-visible + span{outline:2px solid #fff;outline-offset:2px}
-  button.submit{height:52px;border:0;border-radius:26px;background:#fff;color:#000;font:inherit;font-size:16px;font-weight:700;cursor:pointer}
-  button.submit:disabled{opacity:.6;cursor:default}
-  .msg{font-size:14px;min-height:20px;color:#86EFAC}
-  .msg.err{color:#FCA5A5}
-  .privacy{font-size:12px;color:#A1A1AA}
+  /* Confiance */
+  .trust{display:grid;gap:14px}
+  @media (min-width:800px){.trust{grid-template-columns:repeat(4,1fr)}}
+  .trust .card b{display:block;font-size:30px;letter-spacing:-.03em;line-height:1.1}
+  .trust .card span{color:var(--ink2);font-size:15px}
 
-  .faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-  .faq div{background:#fff;border-radius:18px;padding:20px}
-  .faq b{display:block;margin-bottom:6px}
-  .faq p{margin:0;color:var(--ink2);font-size:15px}
-  footer{padding:40px 0 60px;font-size:13px;color:var(--muted)}
+  /* FAQ */
+  details{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px}
+  details+details{margin-top:10px}
+  summary{cursor:pointer;font-weight:700;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--muted);font-weight:400;font-size:22px;line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{margin:10px 0 0;color:var(--ink2)}
 
-  @media (max-width:860px){
-    .hero{grid-template-columns:1fr;padding-top:16px}
-    .phone{order:-1;transform:scale(.88);margin:-30px 0 -40px}
-    .grid3,.faq{grid-template-columns:1fr}
-    .signup{grid-template-columns:1fr;padding:28px}
-    .step{grid-template-columns:1fr;gap:4px}
-  }
+  /* Inscription */
+  .final{background:var(--panel);color:var(--on-dark);border-radius:28px;padding:40px 24px;text-align:center}
+  @media (min-width:700px){.final{padding:56px}}
+  .final h2{color:var(--on-dark)}
+  .final .sub{color:var(--on-dark2);margin:0 auto 28px}
+  form{display:grid;gap:12px;max-width:460px;margin:0 auto;text-align:left}
+  input[type=email]{width:100%;height:54px;border-radius:14px;border:1px solid #3A3A3C;background:var(--dark-card);color:var(--on-dark);padding:0 16px;font-size:16px;font-family:inherit}
+  .seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .seg label{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:12px;border:1px solid #3A3A3C;background:var(--dark-card);font-weight:600;cursor:pointer}
+  .seg input{accent-color:#34B39A}
+  .final .btn{width:100%;background:#fff;color:#000}
+  .msg{min-height:22px;font-size:14px;color:#86EFAC;text-align:center;margin:0}
+  .msg.err{color:#FDBA74}
+  .fine{font-size:13px;color:var(--on-dark2);text-align:center;margin:4px 0 0}
+  .fine a{color:var(--on-dark2)}
+
+  footer{padding:36px 0 48px;font-size:13px;color:var(--muted);text-align:center}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="top">
-    <div class="brand">
-      <div class="logo" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="3.5" fill="#fff"/><path d="M8.5 12.2l2.4 2.4 4.6-5" stroke="#0E6E5C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <span class="logo" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="3.5" fill="#fff"/><path d="M8.5 12.2l2.4 2.4 4.6-5" stroke="#0E6E5C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       Statut
-    </div>
-    <span class="pill">Bêta iPhone</span>
-  </header>
+    </a>
+    <a class="btn small js-cta" href="#essayer">Essayer gratuitement</a>
+  </div>
+</header>
 
-  <main>
-    <div class="hero">
-      <div>
-        <p class="eyebrow">Pour les étudiants et travailleurs étrangers au Canada</p>
-        <h1>Ne rate plus jamais l'expiration de ton permis.</h1>
-        <p class="lead">Statut suit les dates de ton permis d'études, permis de travail, PGWP, passeport et NAS. Il te prévient à temps et te dit quoi faire ensuite, dans le bon ordre.</p>
-        <a class="cta" href="#inscription">Tester l'app en avant-première</a>
-        <p class="note">En français. Sans compte. Tes données restent sur ton iPhone.</p>
-      </div>
+<main class="wrap">
 
-      <div class="phone" role="img" aria-label="Aperçu de l'app Statut : 80 jours avant l'expiration du permis d'études">
-        <div class="screen">
-          <div class="s-date">Jeudi 12 novembre</div>
-          <div class="s-title">Statut</div>
-          <div class="s-card">
-            <div class="s-flag"><span class="dot"></span>Commence ta demande</div>
-            <div class="s-row">
-              <div class="s-h">Prolonge ton<br>permis d'études</div>
-              <div class="s-num">80 <small>jours</small></div>
-            </div>
-            <div class="track"><div class="base"></div><div class="done"></div><div class="now"></div><div class="end"></div></div>
-            <div class="ticks"><span>AUJ.</span><span>J-30 · 1ER JANV.</span><span>31.01.27</span></div>
-          </div>
-          <div class="wallet">
-            <div class="w" style="top:0;background:#1F3D35">Permis d'études <span style="color:var(--warn-soft)">EXP 31.01.27</span></div>
-            <div class="w" style="top:44px;background:#3A3A3C">NAS · série 9 <span style="color:var(--warn-soft)">EXP 31.01.27</span></div>
-            <div class="w" style="top:88px;background:#2B4C6F">Assurance santé <span>EXP 31.08.27</span></div>
-            <div class="w" style="top:132px;background:#14213D">Passeport <span>EXP 15.09.27</span></div>
-          </div>
-        </div>
-      </div>
+  <div class="hero">
+    <div>
+      <p class="eyebrow">Pour les étudiants et travailleurs étrangers au Canada</p>
+      <h1>Ne rate plus jamais l'expiration de ton permis.</h1>
+      <p class="lead">Statut suit ton permis d'études, ton PGWP, ton passeport et ton NAS. Il te prévient à temps et te dit quoi faire, dans le bon ordre.</p>
+      <a class="btn accent js-cta" href="#essayer">Essayer Statut gratuitement</a>
+      <ul class="checks"><li>Gratuit</li><li>En français</li><li>Sans compte</li><li>Tes dates restent sur ton iPhone</li></ul>
     </div>
 
-    <section aria-labelledby="pourquoi">
-      <h2 id="pourquoi">Une date ratée coûte cher.</h2>
-      <p class="sub">Si ton permis expire avant ta demande de prolongation, tu perds ton statut : arrêt des études et du travail, puis une demande de restauration à faire dans les 90 jours. Statut existe pour que ça ne t'arrive pas.</p>
-      <div class="grid3">
-        <div class="feature">
-          <div class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></div>
-          <h3>Des rappels qui arrivent à temps</h3>
-          <p>Bien avant la limite de 30 jours recommandée par IRCC, même si tu n'ouvres jamais l'app. Avec, si tu veux, des rappels discrets sur l'écran verrouillé.</p>
+    <div class="phone" role="img" aria-label="Aperçu de Statut : il reste 80 jours avant l'expiration du permis d'études, avec un rappel J-30">
+      <div class="screen">
+        <div class="s-date">Jeudi 12 novembre</div>
+        <div class="s-title">Statut</div>
+        <div class="s-card">
+          <div class="s-flag"><span class="dot"></span>Commence ta demande</div>
+          <div class="s-row"><div class="s-h">Prolonge ton<br>permis d'études</div><div class="s-num">80 <small>jours</small></div></div>
+          <div class="track"><i class="t-base"></i><i class="t-done"></i><i class="t-now"></i><i class="t-end"></i></div>
+          <div class="ticks"><span>AUJ.</span><span>J-30 · 1ER JANV.</span><span>31.01.27</span></div>
         </div>
-        <div class="feature">
-          <div class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8a2 2 0 0 1 2-2h2l2-2h6l2 2h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="4"/></svg></div>
-          <h3>Scanne, c'est enregistré</h3>
-          <p>Prends ton permis en photo : la date est lue sur ton téléphone, et tu la vérifies. La photo n'est ni envoyée ni gardée.</p>
-        </div>
-        <div class="feature">
-          <div class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></div>
-          <h3>Quoi faire, dans l'ordre</h3>
-          <p>« Préparer ma demande » étape par étape, puis NAS, visa et assurance après ton nouveau permis : Statut sait ce qui dépend de quoi.</p>
+        <div class="wallet">
+          <div class="w" style="top:0;background:#1F3D35">Permis d'études <span style="color:#FDBA74">EXP 31.01.27</span></div>
+          <div class="w" style="top:44px;background:#3A3A3C">NAS · série 9 <span style="color:#FDBA74">EXP 31.01.27</span></div>
+          <div class="w" style="top:88px;background:#2B4C6F">Assurance santé <span>EXP 31.08.27</span></div>
+          <div class="w" style="top:132px;background:#14213D">Passeport <span>EXP 15.09.27</span></div>
         </div>
       </div>
-    </section>
-
-    <section aria-labelledby="exemple">
-      <h2 id="exemple">Ce que Statut voit et que tu risques d'oublier</h2>
-      <p class="sub">Quatre règles officielles que beaucoup découvrent trop tard. Dans l'app, chacune a sa source et sa date de vérification : touche « Pourquoi ces dates ? ».</p>
-      <div class="chain">
-        <div class="step"><div class="k">PASSEPORT</div><div><b>Ton permis ne peut pas dépasser ton passeport.</b><span>Si ton passeport expire bientôt, renouvelle-le avant de prolonger ton permis.</span></div></div>
-        <div class="step"><div class="k">FIN D'ÉTUDES</div><div><b>Ton permis d'études expire aussi 90 jours après la fin de ton programme.</b><span>Même si la date imprimée est plus tard.</span></div></div>
-        <div class="step"><div class="k">JOUR J</div><div><b>La limite n'est pas minuit : c'est 23 h 59 UTC.</b><span>Soit 19 h 59 à Moncton et à Ottawa en hiver. Statut l'affiche à l'heure de ton téléphone.</span></div></div>
-        <div class="step"><div class="k">NAS · 9</div><div><b>Ton NAS temporaire suit la date de ton permis.</b><span>Nouveau permis reçu = mise à jour du NAS auprès de Service Canada.</span></div></div>
+      <div class="notif" aria-hidden="true">
+        <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="3.5" fill="#fff"/><path d="M8.5 12.2l2.4 2.4 4.6-5" stroke="#0E6E5C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div><b>Permis d'études · J-30</b><p>Limite recommandée par IRCC pour demander ta prolongation : dans 30 jours.</p></div>
+        <span class="when">9 h 00</span>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <section aria-labelledby="crise">
-      <h2 id="crise">Et si ça se complique ?</h2>
-      <p class="sub">Statut ne te laisse pas seul·e quand la date est passée. Ces écrans sont toujours accessibles.</p>
-      <div class="grid3">
-        <div class="feature"><h3>Demande envoyée à temps</h3><p>Ce que veut dire le statut maintenu, et la règle à ne pas oublier : ne pas quitter le Canada avant la décision.</p></div>
-        <div class="feature"><h3>Permis expiré</h3><p>Le délai de restauration qu'il te reste, les premières choses à faire et la démarche officielle.</p></div>
-        <div class="feature"><h3>Demande refusée</h3><p>Un écran calme : lire la lettre, parler au bureau international, trouver un représentant autorisé.</p></div>
+  <div class="stake">
+    <div class="big">396,25&nbsp;$</div>
+    <div>
+      <p><strong>C'est ce que coûte une date ratée</strong>, en frais IRCC pour restaurer ton statut et obtenir un nouveau permis d'études. Et en attendant la décision, tu n'as plus le droit d'étudier ni de travailler.</p>
+      <small><a href="https://ircc.canada.ca/english/information/fees/fees.asp" rel="noopener">Liste officielle des frais d'IRCC</a> · tarif en vigueur depuis le 1er décembre 2025</small>
+    </div>
+  </div>
+
+  <section aria-labelledby="comment">
+    <h2 id="comment">Deux minutes pour être tranquille.</h2>
+    <p class="sub">Pas de formulaire à remplir, pas de compte à créer. Juste tes dates.</p>
+    <div class="grid c3">
+      <div class="card"><span class="step">01</span><h3>Scanne ton permis</h3><p>La date est lue sur ton iPhone et tu la confirmes. La photo n'est ni envoyée ni gardée.</p></div>
+      <div class="card"><span class="step">02</span><h3>Reçois tes rappels</h3><p>À J-120, J-90, J-30 et J-7, même si tu n'ouvres jamais l'app. En mode discret si tu veux.</p></div>
+      <div class="card"><span class="step">03</span><h3>Suis les étapes</h3><p>Ta demande pas à pas, puis le NAS, le visa et l'assurance après ton nouveau permis.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="regles">
+    <h2 id="regles">Ce que beaucoup découvrent trop tard.</h2>
+    <p class="sub">Quatre règles officielles que Statut applique pour toi. Chacune est liée à sa source et vérifiée chaque mois.</p>
+    <div class="grid c2">
+      <div class="card rule"><span class="tag">JOUR J</span><h3>La limite n'est pas minuit : c'est 23 h 59 UTC.</h3><p>Soit 19 h 59 à Moncton en hiver. Statut l'affiche à l'heure de ton téléphone.</p></div>
+      <div class="card rule"><span class="tag">FIN D'ÉTUDES</span><h3>Ton permis expire 90 jours après la fin de ton programme.</h3><p>Même si la date imprimée est plus tard.</p></div>
+      <div class="card rule"><span class="tag">PASSEPORT</span><h3>Ton permis ne peut pas dépasser ton passeport.</h3><p>Statut te prévient 12 mois avant, et te donne la fiche de ton ambassade.</p></div>
+      <div class="card rule"><span class="tag">NAS · 9</span><h3>Ton NAS temporaire suit la date de ton permis.</h3><p>Nouveau permis reçu = mise à jour du NAS auprès de Service Canada.</p></div>
+    </div>
+    <div class="crisis" aria-label="Écrans toujours disponibles">
+      <span>Demande envoyée : statut maintenu</span><span>Permis expiré : restauration</span><span>Demande refusée : quoi faire</span>
+    </div>
+  </section>
+
+  <section aria-labelledby="confiance">
+    <h2 id="confiance">Gratuit, et rien ne quitte ton iPhone.</h2>
+    <p class="sub">Pas de compte, pas de pub, pas de traceur. Statut ne vend rien et n'a aucune raison de connaître tes dates.</p>
+    <div class="trust">
+      <div class="card"><b>0</b><span>donnée personnelle envoyée</span></div>
+      <div class="card"><b>27</b><span>pays et leurs ambassades au Canada</span></div>
+      <div class="card"><b>13</b><span>provinces et territoires</span></div>
+      <div class="card"><b>94</b><span>sources officielles relues chaque mois</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="questions">
+    <h2 id="questions">Questions.</h2>
+    <details><summary>J'ai déjà mis un rappel dans mon calendrier. Pourquoi Statut ?</summary><p>Ton calendrier ne sait pas que ton permis expire aussi 90 jours après tes études, que ton passeport bloque ta prolongation, ni que la limite du jour J est 19 h 59 à Moncton. Statut calcule la vraie date et te dit quoi faire avant.</p></details>
+    <details><summary>C'est vraiment gratuit ?</summary><p>Oui. Pas d'abonnement, pas de pub, pas de données revendues.</p></details>
+    <details><summary>Est-ce un conseil juridique ?</summary><p>Non. Statut est un outil d'organisation, avec des liens vers les pages officielles. Pour un cas précis, consulte un représentant autorisé.</p></details>
+    <details><summary>Et sur Android ?</summary><p>Statut sort d'abord sur iPhone. Inscris-toi quand même en choisissant Android : c'est ce qui nous dira s'il faut une version Android.</p></details>
+  </section>
+
+  <section id="essayer" class="final" aria-labelledby="final">
+    <h2 id="final">Ton prochain permis, sans stress.</h2>
+    <p class="sub">Statut est en test sur iPhone. Laisse ton courriel : on t'envoie le lien d'installation.</p>
+    <form id="beta" novalidate>
+      <label for="email" class="sr" style="position:absolute;left:-9999px">Ton courriel</label>
+      <input id="email" name="email" type="email" autocomplete="email" placeholder="ton@courriel.com" required>
+      <div class="seg" role="radiogroup" aria-label="Ton téléphone">
+        <label><input type="radio" name="telephone" value="iphone" checked> iPhone</label>
+        <label><input type="radio" name="telephone" value="android"> Android</label>
       </div>
-    </section>
+      <button class="btn" type="submit">Recevoir le lien</button>
+      <p id="msg" class="msg" role="status" aria-live="polite"></p>
+      <p class="fine">Ton courriel sert seulement à t'envoyer le lien et l'annonce du lancement. <a href="confidentialite.html">Confidentialité</a></p>
+    </form>
+  </section>
+</main>
 
-    <section id="inscription" aria-labelledby="liste">
-      <div class="signup">
-        <div>
-          <h2 id="liste">Teste Statut avant tout le monde.</h2>
-          <p class="sub">La bêta se fait sur iPhone avec TestFlight, l'app de test d'Apple. Inscris-toi : on t'envoie le lien d'installation dès qu'il est prêt, et tu nous dis ce qui marche et ce qui ne marche pas.</p>
-        </div>
-        <form id="waitlist" novalidate>
-          <label>Ton courriel
-            <input type="email" name="email" autocomplete="email" required placeholder="toi@exemple.com">
-          </label>
-          <fieldset>
-            <legend>Ton statut aujourd'hui</legend>
-            <div class="choices">
-              <label class="choice"><input type="radio" name="statut" value="etudiant" required><span>Étudiant·e</span></label>
-              <label class="choice"><input type="radio" name="statut" value="travailleur"><span>Travailleur·se</span></label>
-              <label class="choice"><input type="radio" name="statut" value="pgwp"><span>Diplômé·e (PGWP)</span></label>
-              <label class="choice"><input type="radio" name="statut" value="autre"><span>Autre</span></label>
-            </div>
-          </fieldset>
-          <label>Province
-            <select name="province">
-              <option value="NB">Nouveau-Brunswick</option>
-              <option value="QC">Québec</option>
-              <option value="ON">Ontario</option>
-              <option value="NS">Nouvelle-Écosse</option>
-              <option value="autre">Autre</option>
-            </select>
-          </label>
-          <fieldset>
-            <legend>Ton téléphone</legend>
-            <div class="choices">
-              <label class="choice"><input type="radio" name="telephone" value="iphone" required><span>iPhone</span></label>
-              <label class="choice"><input type="radio" name="telephone" value="android"><span>Android</span></label>
-            </div>
-          </fieldset>
-          <button class="submit" type="submit">M'inscrire à la bêta</button>
-          <div class="msg" id="msg" role="status" aria-live="polite"></div>
-          <p class="privacy">Ton courriel sert seulement à t'envoyer le lien de la bêta et l'annonce du lancement. Aucun partage. <a href="confidentialite.html" style="color:#fff">Confidentialité</a></p>
-        </form>
-      </div>
-    </section>
-
-    <section aria-labelledby="questions">
-      <h2 id="questions">Questions</h2>
-      <div class="faq">
-        <div><b>Est-ce un conseil juridique ?</b><p>Non. Statut est un outil d'organisation, avec des liens vers les pages officielles. Pour un cas précis, consulte un représentant autorisé.</p></div>
-        <div><b>Où vont mes documents ?</b><p>Nulle part. Tout reste sur ton iPhone, sans compte, sans pub, sans traceur.</p></div>
-        <div><b>Comment se passe la bêta ?</b><p>Tu installes TestFlight depuis l'App Store, tu ouvres notre lien, et tu as toute l'app. Tes retours décident de ce qu'on améliore avant le lancement.</p></div>
-        <div><b>Et sur Android ?</b><p>L'app sort d'abord sur iPhone. Inscris-toi quand même en choisissant « Android » : c'est ce qui nous dira s'il faut une version Android.</p></div>
-        <div><b>D'où viennent les dates ?</b><p>Des règles publiées par IRCC et les universités, chacune liée à sa source et datée. Si Statut ne connaît pas un cas, il le dit au lieu d'inventer.</p></div>
-        <div><b>Quelles villes ?</b><p>Statut est construit d'abord avec des étudiants de Moncton. Les règles fédérales valent partout au Canada.</p></div>
-      </div>
-    </section>
-  </main>
-
-  <footer>Statut est une app indépendante, non affiliée à IRCC ni au gouvernement du Canada. Outil d'organisation, pas un avis juridique. · <a href="confidentialite.html">Confidentialité</a></footer>
-</div>
+<footer class="wrap">Statut est une app indépendante, non affiliée à IRCC ni au gouvernement du Canada. Outil d'organisation, pas un avis juridique. · <a href="confidentialite.html">Confidentialité</a></footer>
 
 <script>
-  // Mets ici l'adresse de ton formulaire (ex. Formspree ou un service équivalent qui accepte un POST JSON).
-  // Vide = mode démo : rien n'est envoyé.
+  // Lien public TestFlight : dès qu'il est actif, tous les boutons y mènent directement (aucun formulaire).
+  var TESTFLIGHT_URL = "";
+  // Adresse d'un formulaire qui accepte un POST JSON (ex. table Supabase). Vide = mode démo : rien n'est envoyé.
   var FORM_ENDPOINT = "";
 
-  var form = document.getElementById('waitlist');
-  var msg = document.getElementById('msg');
+  if (/^https:\/\/testflight\.apple\.com\//.test(TESTFLIGHT_URL)) {
+    document.querySelectorAll('.js-cta').forEach(function (a) { a.href = TESTFLIGHT_URL; a.rel = 'noopener'; });
+  }
+
+  var form = document.getElementById('beta'), msg = document.getElementById('msg');
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     msg.className = 'msg';
-    var data = new FormData(form);
-    var email = String(data.get('email') || '').trim();
+    var email = String(new FormData(form).get('email') || '').trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { msg.className = 'msg err'; msg.textContent = 'Entre un courriel valide.'; return; }
-    if (!data.get('statut')) { msg.className = 'msg err'; msg.textContent = 'Choisis ton statut.'; return; }
-    if (!data.get('telephone')) { msg.className = 'msg err'; msg.textContent = 'Choisis ton téléphone.'; return; }
-    var payload = { email: email, statut: data.get('statut'), province: data.get('province'), telephone: data.get('telephone'), date: new Date().toISOString() };
+    if (!FORM_ENDPOINT) { msg.textContent = 'Mode démo : rien n’a été envoyé.'; return; }
     var btn = form.querySelector('button');
-    if (!FORM_ENDPOINT) {
-      msg.textContent = 'Mode démo : formulaire pas encore relié. Rien n’a été envoyé.';
-      return;
-    }
     btn.disabled = true; btn.textContent = 'Envoi…';
-    fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(payload) })
-      .then(function (r) {
-        if (!r.ok) throw new Error();
-        form.reset();
-        msg.textContent = 'C’est noté ! On t’envoie le lien de la bêta dès qu’il est prêt.';
-      })
+    fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email, telephone: new FormData(form).get('telephone') }) })
+      .then(function (r) { if (!r.ok) throw new Error(); form.reset(); msg.textContent = 'C’est noté ! Le lien arrive bientôt dans ta boîte.'; })
       .catch(function () { msg.className = 'msg err'; msg.textContent = 'L’envoi a échoué. Réessaie dans un instant.'; })
-      .then(function () { btn.disabled = false; btn.textContent = 'M’inscrire à la bêta'; });
+      .then(function () { btn.disabled = false; btn.textContent = 'Recevoir le lien'; });
   });
 </script>
 </body>

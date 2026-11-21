@@ -1,27 +1,80 @@
 {
-  "version": 1,
-  "verified_on": "2026-11-20",
+  "version": 2,
+  "verified_on": "2026-11-21",
   "verification_report": "docs/verification-regles-2026-11-20.md",
   "deadlines": {
-    "study_permit_extension_min_days": { "value": 30, "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/extend-study-permit/when-to-apply.html" },
-    "program_end_grace_days": { "value": 90, "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/extend-study-permit/when-to-apply.html" },
-    "restoration_window_days": { "value": 90, "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/apply.html" },
-    "pgwp_window_days": { "value": 180, "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html" },
-    "maintained_status_cutoff_utc": { "value": "23:59:59", "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/extend/apply.html", "note": "Écrit par IRCC pour le permis de travail (« before midnight UTC on the day your work permit expires ») ; le système de demande en ligne d'IRCC fonctionne en UTC pour tous les permis." },
-    "passport_renewal_lead_days": { "value": 365, "source": "https://studentstest.usask.ca/international/passport.php", "kind": "conseil" },
-    "nb_worker_medicare_min_days": { "value": 365, "source": "https://www.cbc.ca/news/canada/new-brunswick/seasonal-workers-medicare-health-care-insurance-1.6740208", "to_verify": true, "note": "Non confirmé par le règlement 84-20 (partie lue : aucune durée minimale). À confirmer auprès de Medicare N.-B." }
+    "study_permit_extension_min_days": {
+      "value": 30,
+      "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/extend-study-permit/when-to-apply.html"
+    },
+    "program_end_grace_days": {
+      "value": 90,
+      "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/extend-study-permit/when-to-apply.html"
+    },
+    "restoration_window_days": {
+      "value": 90,
+      "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/apply.html"
+    },
+    "pgwp_window_days": {
+      "value": 180,
+      "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html"
+    },
+    "maintained_status_cutoff_utc": {
+      "value": "23:59:59",
+      "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/extend/apply.html",
+      "note": "Écrit par IRCC pour le permis de travail (« before midnight UTC on the day your work permit expires ») ; le système de demande en ligne d'IRCC fonctionne en UTC pour tous les permis."
+    },
+    "passport_renewal_lead_days": {
+      "value": 365,
+      "source": "https://studentstest.usask.ca/international/passport.php",
+      "kind": "conseil"
+    },
+    "nb_student_medicare_min_months": {
+      "value": 6,
+      "source": "https://laws.gnb.ca/en/showfulldoc/cr/84-20",
+      "note": "Règlement 84-20, art. 2 (c) : étudiant à temps plein dans un EED du N.-B., permis d'études d'au moins six mois consécutifs, domicile au N.-B. Travailleurs : aucune règle confirmée, l'app ne calcule rien et renvoie au lien officiel."
+    }
   },
   "rules_without_value": {
-    "permit_limited_by_passport": { "source": "https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=1504&top=15", "note": "« We'll only give you a permit that's valid as long as your passport or travel document. »" },
-    "sin_9_expires_with_permit": { "source": "https://www.canada.ca/en/employment-social-development/services/sin/temporary-residents.html", "note": "« Your SIN expires on the same date your work permit, study permit or visitor record expires »" }
+    "permit_limited_by_passport": {
+      "source": "https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=1504&top=15",
+      "note": "« We'll only give you a permit that's valid as long as your passport or travel document. »"
+    },
+    "sin_9_expires_with_permit": {
+      "source": "https://www.canada.ca/en/employment-social-development/services/sin/temporary-residents.html",
+      "note": "« Your SIN expires on the same date your work permit, study permit or visitor record expires »"
+    }
   },
   "product_thresholds": {
     "note": "Choix de produit, pas des règles IRCC. Ne jamais les présenter comme officiels.",
     "phase_prepare_days": 120,
     "phase_apply_days": 90,
     "phase_urgent_days": 30,
-    "reminder_offsets_pro": [120, 90, 30, 7],
-    "reminder_offsets_free": [30],
+    "reminder_offsets_pro": [
+      120,
+      90,
+      30,
+      7
+    ],
+    "reminder_offsets_free": [
+      30
+    ],
     "reminder_hour_local": 9
+  },
+  "provincial_health": {
+    "note": "Page officielle de l'assurance-maladie de chaque province ou territoire. L'app ne calcule l'admissibilité que pour les étudiants du N.-B. ; ailleurs, elle donne ce lien.",
+    "NB": "https://www2.gnb.ca/content/gnb/en/departments/health/DrugPlans/content/medicare/Eligibility.html",
+    "QC": "https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/know-eligibility-conditions",
+    "ON": "https://www.ontario.ca/page/apply-ohip-and-get-health-card",
+    "NS": "https://novascotia.ca/dhw/msi/",
+    "PE": "https://www.princeedwardisland.ca/en/information/health-pei/pei-health-card",
+    "NL": "https://www.gov.nl.ca/hcs/mcp/",
+    "MB": "https://www.gov.mb.ca/health/mhsip/index.fr.html",
+    "SK": "https://www.ehealthsask.ca/residents/health-cards/apply-for-a-health-card/eligibility-for-health-benefits",
+    "AB": "https://www.alberta.ca/ahcip-eligibility",
+    "BC": "https://www2.gov.bc.ca/gov/content/health/health-drug-coverage/msp/bc-residents/eligibility-and-enrolment/are-you-eligible",
+    "YT": "https://yukon.ca/en/health-and-wellness/care-services/apply-health-care-card",
+    "NT": "https://www.hss.gov.nt.ca/en/services/nwt-health-care-plan",
+    "NU": "https://www.gov.nu.ca/en/health/about-nunavut-health-care-plan"
   }
 }
