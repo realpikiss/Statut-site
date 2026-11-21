@@ -43,6 +43,10 @@
     "sin_9_expires_with_permit": {
       "source": "https://www.canada.ca/en/employment-social-development/services/sin/temporary-residents.html",
       "note": "« Your SIN expires on the same date your work permit, study permit or visitor record expires »"
+    },
+    "sin_apply": {
+      "source": "https://www.canada.ca/fr/emploi-developpement-social/services/numero-assurance-sociale/demande.html",
+      "note": "Lien « Demander ton NAS » de la carte « À faire en arrivant » (ArrivalTodo.swift). Suivi par la veille."
     }
   },
   "product_thresholds": {
