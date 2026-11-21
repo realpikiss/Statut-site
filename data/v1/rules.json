@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "verified_on": "2026-11-20",
+  "verification_report": "docs/verification-regles-2026-11-20.md",
+  "deadlines": {
+    "study_permit_extension_min_days": { "value": 30, "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/extend-study-permit/when-to-apply.html" },
+    "program_end_grace_days": { "value": 90, "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/extend-study-permit/when-to-apply.html" },
+    "restoration_window_days": { "value": 90, "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/apply.html" },
+    "pgwp_window_days": { "value": 180, "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html" },
+    "maintained_status_cutoff_utc": { "value": "23:59:59", "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/extend/apply.html", "note": "Écrit par IRCC pour le permis de travail (« before midnight UTC on the day your work permit expires ») ; le système de demande en ligne d'IRCC fonctionne en UTC pour tous les permis." },
+    "passport_renewal_lead_days": { "value": 365, "source": "https://studentstest.usask.ca/international/passport.php", "kind": "conseil" },
+    "nb_worker_medicare_min_days": { "value": 365, "source": "https://www.cbc.ca/news/canada/new-brunswick/seasonal-workers-medicare-health-care-insurance-1.6740208", "to_verify": true, "note": "Non confirmé par le règlement 84-20 (partie lue : aucune durée minimale). À confirmer auprès de Medicare N.-B." }
+  },
+  "rules_without_value": {
+    "permit_limited_by_passport": { "source": "https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=1504&top=15", "note": "« We'll only give you a permit that's valid as long as your passport or travel document. »" },
+    "sin_9_expires_with_permit": { "source": "https://www.canada.ca/en/employment-social-development/services/sin/temporary-residents.html", "note": "« Your SIN expires on the same date your work permit, study permit or visitor record expires »" }
+  },
+  "product_thresholds": {
+    "note": "Choix de produit, pas des règles IRCC. Ne jamais les présenter comme officiels.",
+    "phase_prepare_days": 120,
+    "phase_apply_days": 90,
+    "phase_urgent_days": 30,
+    "reminder_offsets_pro": [120, 90, 30, 7],
+    "reminder_offsets_free": [30],
+    "reminder_hour_local": 9
+  }
+}

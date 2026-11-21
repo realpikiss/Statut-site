@@ -1,0 +1,468 @@
+{
+  "version": 1,
+  "verified_on": "2026-11-14",
+  "note": "Liste de départ, pas exhaustive. À compléter et à vérifier avec la liste officielle des établissements d'enseignement désignés (EED) sur canada.ca. Sert seulement à remplir le profil : aucune règle n'en dépend.",
+  "source": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list.html",
+  "institutions": [
+    {
+      "name": "Université de Moncton",
+      "city": "Moncton",
+      "province": "NB"
+    },
+    {
+      "name": "Crandall University",
+      "city": "Moncton",
+      "province": "NB"
+    },
+    {
+      "name": "Oulton College",
+      "city": "Moncton",
+      "province": "NB"
+    },
+    {
+      "name": "NBCC – Moncton",
+      "city": "Moncton",
+      "province": "NB"
+    },
+    {
+      "name": "CCNB – Campus de Dieppe",
+      "city": "Dieppe",
+      "province": "NB"
+    },
+    {
+      "name": "Université de Moncton, campus d'Edmundston",
+      "city": "Edmundston",
+      "province": "NB"
+    },
+    {
+      "name": "CCNB – Campus d'Edmundston",
+      "city": "Edmundston",
+      "province": "NB"
+    },
+    {
+      "name": "Université de Moncton, campus de Shippagan",
+      "city": "Shippagan",
+      "province": "NB"
+    },
+    {
+      "name": "CCNB – Campus de la Péninsule acadienne",
+      "city": "Shippagan",
+      "province": "NB"
+    },
+    {
+      "name": "CCNB – Campus de Bathurst",
+      "city": "Bathurst",
+      "province": "NB"
+    },
+    {
+      "name": "CCNB – Campus de Campbellton",
+      "city": "Campbellton",
+      "province": "NB"
+    },
+    {
+      "name": "University of New Brunswick",
+      "city": "Fredericton",
+      "province": "NB"
+    },
+    {
+      "name": "St. Thomas University",
+      "city": "Fredericton",
+      "province": "NB"
+    },
+    {
+      "name": "NBCC – Fredericton",
+      "city": "Fredericton",
+      "province": "NB"
+    },
+    {
+      "name": "University of New Brunswick – Saint John",
+      "city": "Saint John",
+      "province": "NB"
+    },
+    {
+      "name": "NBCC – Saint John",
+      "city": "Saint John",
+      "province": "NB"
+    },
+    {
+      "name": "Mount Allison University",
+      "city": "Sackville",
+      "province": "NB"
+    },
+    {
+      "name": "NBCC – Miramichi",
+      "city": "Miramichi",
+      "province": "NB"
+    },
+    {
+      "name": "NBCC – Woodstock",
+      "city": "Woodstock",
+      "province": "NB"
+    },
+    {
+      "name": "NBCC – St. Andrews",
+      "city": "St. Andrews",
+      "province": "NB"
+    },
+    {
+      "name": "Université de Montréal",
+      "city": "Montréal",
+      "province": "QC"
+    },
+    {
+      "name": "McGill University",
+      "city": "Montréal",
+      "province": "QC"
+    },
+    {
+      "name": "Université du Québec à Montréal (UQAM)",
+      "city": "Montréal",
+      "province": "QC"
+    },
+    {
+      "name": "Concordia University",
+      "city": "Montréal",
+      "province": "QC"
+    },
+    {
+      "name": "Polytechnique Montréal",
+      "city": "Montréal",
+      "province": "QC"
+    },
+    {
+      "name": "HEC Montréal",
+      "city": "Montréal",
+      "province": "QC"
+    },
+    {
+      "name": "École de technologie supérieure (ÉTS)",
+      "city": "Montréal",
+      "province": "QC"
+    },
+    {
+      "name": "Université Laval",
+      "city": "Québec",
+      "province": "QC"
+    },
+    {
+      "name": "Université de Sherbrooke",
+      "city": "Sherbrooke",
+      "province": "QC"
+    },
+    {
+      "name": "Bishop's University",
+      "city": "Sherbrooke",
+      "province": "QC"
+    },
+    {
+      "name": "Université du Québec à Trois-Rivières (UQTR)",
+      "city": "Trois-Rivières",
+      "province": "QC"
+    },
+    {
+      "name": "Université du Québec à Chicoutimi (UQAC)",
+      "city": "Saguenay",
+      "province": "QC"
+    },
+    {
+      "name": "Université du Québec à Rimouski (UQAR)",
+      "city": "Rimouski",
+      "province": "QC"
+    },
+    {
+      "name": "Université du Québec en Outaouais (UQO)",
+      "city": "Gatineau",
+      "province": "QC"
+    },
+    {
+      "name": "University of Toronto",
+      "city": "Toronto",
+      "province": "ON"
+    },
+    {
+      "name": "York University",
+      "city": "Toronto",
+      "province": "ON"
+    },
+    {
+      "name": "Toronto Metropolitan University",
+      "city": "Toronto",
+      "province": "ON"
+    },
+    {
+      "name": "Seneca Polytechnic",
+      "city": "Toronto",
+      "province": "ON"
+    },
+    {
+      "name": "Humber Polytechnic",
+      "city": "Toronto",
+      "province": "ON"
+    },
+    {
+      "name": "George Brown College",
+      "city": "Toronto",
+      "province": "ON"
+    },
+    {
+      "name": "Université d'Ottawa",
+      "city": "Ottawa",
+      "province": "ON"
+    },
+    {
+      "name": "Carleton University",
+      "city": "Ottawa",
+      "province": "ON"
+    },
+    {
+      "name": "Collège La Cité",
+      "city": "Ottawa",
+      "province": "ON"
+    },
+    {
+      "name": "Algonquin College",
+      "city": "Ottawa",
+      "province": "ON"
+    },
+    {
+      "name": "University of Waterloo",
+      "city": "Waterloo",
+      "province": "ON"
+    },
+    {
+      "name": "Conestoga College",
+      "city": "Kitchener",
+      "province": "ON"
+    },
+    {
+      "name": "Western University",
+      "city": "London",
+      "province": "ON"
+    },
+    {
+      "name": "McMaster University",
+      "city": "Hamilton",
+      "province": "ON"
+    },
+    {
+      "name": "Queen's University",
+      "city": "Kingston",
+      "province": "ON"
+    },
+    {
+      "name": "University of Windsor",
+      "city": "Windsor",
+      "province": "ON"
+    },
+    {
+      "name": "Université Laurentienne",
+      "city": "Sudbury",
+      "province": "ON"
+    },
+    {
+      "name": "Collège Boréal",
+      "city": "Sudbury",
+      "province": "ON"
+    },
+    {
+      "name": "Université de Hearst",
+      "city": "Hearst",
+      "province": "ON"
+    },
+    {
+      "name": "Dalhousie University",
+      "city": "Halifax",
+      "province": "NS"
+    },
+    {
+      "name": "Saint Mary's University",
+      "city": "Halifax",
+      "province": "NS"
+    },
+    {
+      "name": "Mount Saint Vincent University",
+      "city": "Halifax",
+      "province": "NS"
+    },
+    {
+      "name": "NSCC",
+      "city": "Halifax",
+      "province": "NS"
+    },
+    {
+      "name": "Université Sainte-Anne",
+      "city": "Pointe-de-l'Église",
+      "province": "NS"
+    },
+    {
+      "name": "Acadia University",
+      "city": "Wolfville",
+      "province": "NS"
+    },
+    {
+      "name": "Cape Breton University",
+      "city": "Sydney",
+      "province": "NS"
+    },
+    {
+      "name": "St. Francis Xavier University",
+      "city": "Antigonish",
+      "province": "NS"
+    },
+    {
+      "name": "University of Prince Edward Island",
+      "city": "Charlottetown",
+      "province": "PE"
+    },
+    {
+      "name": "Holland College",
+      "city": "Charlottetown",
+      "province": "PE"
+    },
+    {
+      "name": "Collège de l'Île",
+      "city": "Wellington",
+      "province": "PE"
+    },
+    {
+      "name": "Memorial University of Newfoundland",
+      "city": "St. John's",
+      "province": "NL"
+    },
+    {
+      "name": "College of the North Atlantic",
+      "city": "St. John's",
+      "province": "NL"
+    },
+    {
+      "name": "University of Manitoba",
+      "city": "Winnipeg",
+      "province": "MB"
+    },
+    {
+      "name": "Université de Saint-Boniface",
+      "city": "Winnipeg",
+      "province": "MB"
+    },
+    {
+      "name": "University of Winnipeg",
+      "city": "Winnipeg",
+      "province": "MB"
+    },
+    {
+      "name": "Red River College Polytechnic",
+      "city": "Winnipeg",
+      "province": "MB"
+    },
+    {
+      "name": "Brandon University",
+      "city": "Brandon",
+      "province": "MB"
+    },
+    {
+      "name": "University of Saskatchewan",
+      "city": "Saskatoon",
+      "province": "SK"
+    },
+    {
+      "name": "Saskatchewan Polytechnic",
+      "city": "Saskatoon",
+      "province": "SK"
+    },
+    {
+      "name": "University of Regina",
+      "city": "Regina",
+      "province": "SK"
+    },
+    {
+      "name": "University of Alberta",
+      "city": "Edmonton",
+      "province": "AB"
+    },
+    {
+      "name": "MacEwan University",
+      "city": "Edmonton",
+      "province": "AB"
+    },
+    {
+      "name": "NAIT",
+      "city": "Edmonton",
+      "province": "AB"
+    },
+    {
+      "name": "University of Calgary",
+      "city": "Calgary",
+      "province": "AB"
+    },
+    {
+      "name": "Mount Royal University",
+      "city": "Calgary",
+      "province": "AB"
+    },
+    {
+      "name": "SAIT",
+      "city": "Calgary",
+      "province": "AB"
+    },
+    {
+      "name": "University of Lethbridge",
+      "city": "Lethbridge",
+      "province": "AB"
+    },
+    {
+      "name": "University of British Columbia",
+      "city": "Vancouver",
+      "province": "BC"
+    },
+    {
+      "name": "Langara College",
+      "city": "Vancouver",
+      "province": "BC"
+    },
+    {
+      "name": "Simon Fraser University",
+      "city": "Burnaby",
+      "province": "BC"
+    },
+    {
+      "name": "BCIT",
+      "city": "Burnaby",
+      "province": "BC"
+    },
+    {
+      "name": "Douglas College",
+      "city": "New Westminster",
+      "province": "BC"
+    },
+    {
+      "name": "University of Victoria",
+      "city": "Victoria",
+      "province": "BC"
+    },
+    {
+      "name": "Thompson Rivers University",
+      "city": "Kamloops",
+      "province": "BC"
+    },
+    {
+      "name": "University of Northern British Columbia",
+      "city": "Prince George",
+      "province": "BC"
+    },
+    {
+      "name": "Yukon University",
+      "city": "Whitehorse",
+      "province": "YT"
+    },
+    {
+      "name": "Aurora College",
+      "city": "Fort Smith",
+      "province": "NT"
+    },
+    {
+      "name": "Nunavut Arctic College",
+      "city": "Iqaluit",
+      "province": "NU"
+    }
+  ]
+}

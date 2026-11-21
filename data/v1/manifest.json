@@ -1,0 +1,20 @@
+{
+  "format": 1,
+  "files": {
+    "rules.json": {
+      "sha256": "14cc43a8302e9b7a8fab2549539517956c802db3ec1f932518819676fdde9700",
+      "version": 1,
+      "verified_on": "2026-11-20"
+    },
+    "countries.json": {
+      "sha256": "a9c6c945e2f7816cef7919292f04fc3309d5c262e5d4619ccbf355e9eb7ea30b",
+      "version": 1,
+      "verified_on": "2026-11-21"
+    },
+    "institutions.json": {
+      "sha256": "b9cd9a2dfcdb2db2b40d74ea0929e44ff860857e1d2395e1e451b78e70997257",
+      "version": 1,
+      "verified_on": "2026-11-14"
+    }
+  }
+}

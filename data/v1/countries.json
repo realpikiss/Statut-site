@@ -1,0 +1,602 @@
+{
+  "version": 1,
+  "verified_on": "2026-11-21",
+  "note": "27 pays : Afrique francophone, Haïti, France, Belgique, Suisse (choix du 21 nov. 2026). Visas vérifiés sur canada.ca (What you need to enter Canada, page du 2026-07-31) ; Maroc : AVE possible par avion sous conditions. Fiches ambassade : coordonnées du répertoire officiel du MRIF (Québec, mis à jour le 20 nov. 2026) et démarches lues sur le site officiel de chaque mission ; to_verify_on_official_site = démarches non trouvées. RD Congo : coordonnées d'annuaires seulement (aucune page officielle), fiche à confirmer. Les autres pays restent choisissables dans l'app (visa : à vérifier).",
+  "countries": [
+    {
+      "iso2": "DZ",
+      "name_fr": "Algérie",
+      "visa_required": true,
+      "embassy": {
+        "name": "Ambassade d'Algérie au Canada",
+        "address": "500, rue Wilbrod, Ottawa (Ontario) K1N 6N2",
+        "phone": "+1 613-789-8505",
+        "website": "https://www.ambalgott.com",
+        "procedures": [
+          "Passeport biométrique : en personne à la section consulaire (empreintes et photo)",
+          "Section consulaire : 435, avenue Daly, Ottawa",
+          "Horaires consulaires : mardi au vendredi 9 h 30 – 14 h, samedi 9 h 30 – 13 h",
+          "Consulat général à Montréal : +1 514-846-0442"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=DZA",
+          "https://www.ambalgott.com/passeport",
+          "https://www.ambalgott.com/contact"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": false
+      }
+    },
+    {
+      "iso2": "BE",
+      "name_fr": "Belgique",
+      "visa_required": false,
+      "embassy": {
+        "name": "Consulat général de Belgique à Montréal",
+        "address": "1000, rue Sherbrooke Ouest, bureau 1400, Montréal (Québec) H3A 3G4",
+        "phone": "+1 514-849-7394",
+        "website": "https://canada.diplomatie.belgium.be/fr",
+        "procedures": [
+          "L'ambassade à Ottawa ne traite pas les affaires consulaires",
+          "Passeport : en personne à Montréal, rendez-vous en ligne uniquement",
+          "Avant la demande : inscription au registre du consulat",
+          "Délai : environ 2 semaines"
+        ],
+        "sources": [
+          "https://canada.diplomatie.belgium.be/en/embassy-consulate-general-and-honorary-consulates",
+          "https://canada.diplomatie.belgium.be/en/consular-services/passport"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": false
+      }
+    },
+    {
+      "iso2": "BJ",
+      "name_fr": "Bénin",
+      "visa_required": true,
+      "embassy": {
+        "name": "Ambassade du Bénin à Washington (aucune ambassade au Canada)",
+        "address": "2124 Kalorama Road NW, Washington, DC 20008, États-Unis",
+        "phone": "+1 202-232-6656",
+        "website": "https://beninembassy.us",
+        "procedures": [
+          "Passeport : enrôlement en personne à Washington, sur rendez-vous (téléphone ou courriel)",
+          "Délai : au moins 3 à 4 semaines",
+          "Consul honoraire à Montréal : +1 514-585-9934"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=BEN",
+          "https://beninembassy.us/fiche-de-renseignement-pour-renouvellement-de-passeport-passeport/"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": false
+      }
+    },
+    {
+      "iso2": "BF",
+      "name_fr": "Burkina Faso",
+      "visa_required": true,
+      "embassy": {
+        "name": "Ambassade du Burkina Faso au Canada",
+        "address": "48, chemin Range, Ottawa (Ontario) K1N 8J4",
+        "phone": "+1 613-238-4796",
+        "website": "https://ambabf-ca.org",
+        "procedures": [
+          "Services consulaires : sur rendez-vous",
+          "Passeport : empreintes obligatoires à l'ambassade"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=BFA",
+          "https://ambabf-ca.org/passeport/"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": false
+      }
+    },
+    {
+      "iso2": "BI",
+      "name_fr": "Burundi",
+      "visa_required": true,
+      "embassy": {
+        "name": "Ambassade du Burundi au Canada",
+        "address": "81, rue Metcalfe, bureau 500, Ottawa (Ontario) K1P 6K7",
+        "phone": "+1 613-569-6666",
+        "website": "https://www.ambabuottawa.mae.gov.bi",
+        "procedures": [
+          "Horaires : lundi au vendredi 9 h – 17 h",
+          "Démarches passeport ordinaire : à confirmer auprès de l'ambassade (le site ne détaille que le passeport diplomatique)"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=BDI",
+          "https://www.ambabuottawa.mae.gov.bi/passeport/"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": true
+      }
+    },
+    {
+      "iso2": "CM",
+      "name_fr": "Cameroun",
+      "visa_required": true,
+      "embassy": {
+        "name": "Haut-commissariat du Cameroun au Canada",
+        "address": "170, avenue Clemow, Ottawa (Ontario) K1S 2B4",
+        "phone": "+1 613-236-1522",
+        "website": "https://cameroon-high-commission.ca",
+        "procedures": [
+          "Passeport : préinscription en ligne (site de la DGSN, rendez-vous inclus), puis enrôlement au Haut-commissariat, puis retrait ou réception",
+          "Enrôlement passeport : du lundi au jeudi, 9 h 30 – 12 h 30",
+          "Fermé les jours fériés canadiens et camerounais"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=CMR",
+          "https://cameroon-high-commission.ca/fr/consular-services/apply-for-passport"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": false
+      }
+    },
+    {
+      "iso2": "KM",
+      "name_fr": "Comores",
+      "visa_required": true,
+      "embassy": {
+        "name": "Consul honoraire des Comores (Burlington, Ontario)",
+        "address": "5375 Blind Line, Burlington (Ontario) L7P 0B1",
+        "phone": "+1 905-319-1244",
+        "procedures": [
+          "Pas d'ambassade au Canada ; service biométrique documenté : ambassade des Comores à Paris",
+          "Demander au consul honoraire si New York est possible"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=COM"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": true
+      }
+    },
+    {
+      "iso2": "CG",
+      "name_fr": "Congo (Brazzaville)",
+      "visa_required": true,
+      "embassy": {
+        "name": "Ambassade de la République du Congo au Canada",
+        "address": "1400, boulevard St-Laurent, bureau 105, Ottawa (Ontario) K1K 4H4",
+        "phone": "+1 613-790-1416",
+        "website": "https://www.ambassadecongocanada.org",
+        "procedures": [
+          "Passeport : l'ambassade ne reçoit ni ne traite les demandes",
+          "Attestation de perte de passeport : par la poste (enveloppe prépayée)",
+          "Horaires : lundi au vendredi 9 h 30 – 15 h"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=COG",
+          "https://www.ambassadecongocanada.org/fr/Services-consulaires/passeport/"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": false
+      }
+    },
+    {
+      "iso2": "CI",
+      "name_fr": "Côte d'Ivoire",
+      "visa_required": true,
+      "flag": {
+        "kind": "vertical_stripes",
+        "colors": [
+          "#F77F00",
+          "#FFFFFF",
+          "#009E60"
+        ]
+      },
+      "embassy": {
+        "name": "Ambassade de Côte d'Ivoire au Canada",
+        "address": "2713 Lancaster Road, Suite 201, Ottawa (Ontario) K1B 5R6",
+        "phone": "+1 613-236-9919",
+        "website": "https://canada.diplomatie.gouv.ci",
+        "procedures": [
+          "Passeport biométrique : rendez-vous et paiement en ligne sur monpasseport.ci ; carte consulaire valide obligatoire",
+          "Renouvellement refusé tant que le passeport est encore valide plus de 6 mois",
+          "Retrait du passeport : 1 à 3 mois ; retour possible par enveloppe Xpresspost prépayée",
+          "Service consulaire : +1 343-997-3306",
+          "Fermée aux usagers le jeudi"
+        ],
+        "sources": [
+          "https://canada.diplomatie.gouv.ci/services.php",
+          "https://canada.diplomatie.gouv.ci/visa.php?lang=&num=50",
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=CIV"
+        ],
+        "verified_on": "2026-11-20",
+        "to_verify_on_official_site": false
+      }
+    },
+    {
+      "iso2": "DJ",
+      "name_fr": "Djibouti",
+      "visa_required": true,
+      "embassy": {
+        "name": "Ambassade de Djibouti à Washington (aucune au Canada)",
+        "address": "1156 15th Street NW, Suite 515, Washington, DC 20005, États-Unis",
+        "phone": "+1 202-331-0270",
+        "website": "https://www.djiboutiembassyus.org",
+        "procedures": [
+          "Passeport : envoyer d'abord le dossier par courriel (consular@djiboutiembassyus.org) pour vérification",
+          "Puis présence en personne à Washington pour la photo et les empreintes (13 ans et plus)",
+          "Retour : enveloppe prépayée avec suivi"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=DJI",
+          "https://www.djiboutiembassyus.org/page/biometric-passport"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": true
+      }
+    },
+    {
+      "iso2": "FR",
+      "name_fr": "France",
+      "visa_required": false,
+      "embassy": {
+        "name": "Consulat général de France à Moncton et Halifax",
+        "address": "777, rue Main, bureau 700, Moncton (N.-B.) E1C 1E9",
+        "phone": "+1 506-857-4191",
+        "website": "https://ca.diplomatie.gouv.fr/en/consulate-general-france-moncton-and-halifax",
+        "procedures": [
+          "Circonscription : N.-B., N.-É., Î.-P.-É., T.-N.-L.",
+          "Passeport : rendez-vous en ligne, présence obligatoire",
+          "Retrait : sans rendez-vous, du lundi au vendredi 9 h – 12 h 30",
+          "État civil : consulat général de Montréal",
+          "Urgence consulaire (soirs, fins de semaine) : +1 506-232-6018"
+        ],
+        "sources": [
+          "https://ca.diplomatie.gouv.fr/en/consulate-general-france-moncton-and-halifax",
+          "https://ca.diplomatie.gouv.fr/fr/idendite/passeport-pre-demande-envoi-postal"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": false
+      }
+    },
+    {
+      "iso2": "GA",
+      "name_fr": "Gabon",
+      "visa_required": true,
+      "embassy": {
+        "name": "Haut-commissariat du Gabon au Canada",
+        "address": "2283, boulevard St-Laurent, bureau 103, Ottawa (Ontario) K1G 5A2",
+        "phone": "+1 613-232-5301",
+        "website": "https://www.ambassadegabon.ca",
+        "procedures": [
+          "Horaires : lundi au vendredi 9 h – 16 h",
+          "Passeport : centre des passeports du consulat du Gabon à Paris (écrire avant de voyager)",
+          "Demander à l'ambassade d'Ottawa si une mission d'enrôlement au Canada est prévue"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=GAB",
+          "https://www.ambassadegabon.ca/themes/page/18/services/passeport/"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": true
+      }
+    },
+    {
+      "iso2": "GN",
+      "name_fr": "Guinée",
+      "visa_required": true,
+      "embassy": {
+        "name": "Ambassade de Guinée au Canada",
+        "address": "483, rue Wilbrod, Ottawa (Ontario) K1N 6N1",
+        "phone": "+1 613-789-8444",
+        "website": "https://ca.ambaguinee.org",
+        "procedures": [
+          "Passeport : demande et rendez-vous en ligne sur la plateforme E-KAIDI (citoyens.ambaguinee.org)",
+          "Livraison : à domicile par la poste ou retrait",
+          "Horaires : lundi au vendredi 9 h – 15 h"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=GIN",
+          "https://ca.ambaguinee.org/?page_id=6327"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": false
+      }
+    },
+    {
+      "iso2": "HT",
+      "name_fr": "Haïti",
+      "visa_required": true,
+      "embassy": {
+        "name": "Ambassade d'Haïti au Canada",
+        "address": "85, rue Albert, bureau 1110, Ottawa (Ontario) K1P 6A4",
+        "phone": "+1 613-238-1628",
+        "website": "https://www.ambassade-haiti.ca",
+        "procedures": [
+          "Passeport : demande par la poste (Xpresspost), documents notariés",
+          "Avant l'envoi : appeler la section consulaire (postes 321 ou 329)",
+          "Ouverture au public : en semaine, sur rendez-vous",
+          "Consulat général à Montréal : +1 514-499-1919"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=HTI",
+          "https://ambassade-haiti.ca/ambassade/structure-et-services/section-consulaire/passeports/"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": false
+      }
+    },
+    {
+      "iso2": "MG",
+      "name_fr": "Madagascar",
+      "visa_required": true,
+      "embassy": {
+        "name": "Ambassade de Madagascar au Canada",
+        "address": "3, rue Raymond, Ottawa (Ontario) K1R 1A3",
+        "phone": "+1 613-567-0505",
+        "procedures": [
+          "Démarches passeport : à confirmer auprès de l'ambassade"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=MDG"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": true
+      }
+    },
+    {
+      "iso2": "ML",
+      "name_fr": "Mali",
+      "visa_required": true,
+      "embassy": {
+        "name": "Ambassade du Mali au Canada",
+        "address": "50, avenue Goulburn, Ottawa (Ontario) K1N 8C8",
+        "phone": "+1 613-232-1501",
+        "website": "https://www.ambamali.ca",
+        "procedures": [
+          "Services consulaires : lundi, mercredi et vendredi, 9 h 30 – 14 h",
+          "Démarches passeport : à confirmer (consulaires@ambamali.ca)"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=MLI",
+          "https://ambamali.ca/passeport/"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": true
+      }
+    },
+    {
+      "iso2": "MA",
+      "name_fr": "Maroc",
+      "visa_required": true,
+      "embassy": {
+        "name": "Consulat général du Maroc à Montréal (Québec et Atlantique)",
+        "address": "1551, rue Ontario Est, Montréal (Québec) H2L 1S6",
+        "phone": "+1 514-288-8750",
+        "website": "https://www.consulat.ma",
+        "procedures": [
+          "Passeport : immatriculation consulaire, puis rendez-vous gratuit sur rdv.consulat.ma",
+          "Adultes : carte nationale (CNIE) valide obligatoire",
+          "Retrait : sans rendez-vous, avec le récépissé",
+          "Ambassade à Ottawa : +1 613-236-7391"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=MAR",
+          "https://rdv.consulat.ma"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": true
+      }
+    },
+    {
+      "iso2": "MR",
+      "name_fr": "Mauritanie",
+      "visa_required": true,
+      "embassy": {
+        "name": "Ambassade de Mauritanie au Canada",
+        "address": "81, rue Metcalfe, 12e étage, Ottawa (Ontario) K1P 6K7",
+        "phone": "+1 613-235-1303",
+        "website": "https://emb-cnd.diplomatie.gov.mr",
+        "procedures": [
+          "Passeport : renouvellement par la plateforme HOUWIYETI (identité numérique, photo, pays de résidence, paiement)",
+          "Consul honoraire à Montréal : +1 514-288-2726"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=MRT",
+          "https://emb-cnd.diplomatie.gov.mr/index.php/fr/node/110"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": false
+      }
+    },
+    {
+      "iso2": "NE",
+      "name_fr": "Niger",
+      "visa_required": true,
+      "embassy": {
+        "name": "Ambassade du Niger à Washington (aucune au Canada)",
+        "address": "2204 R Street NW, Washington, DC 20008, États-Unis",
+        "phone": "+1 202-483-4224",
+        "website": "https://embassyofniger-usa.org",
+        "procedures": [
+          "D'abord : carte consulaire pour les Nigériens vivant au Canada (auprès de l'ambassade à Washington)",
+          "Passeport : dossier par la poste, empreintes relevées à l'ambassade ou dans un centre agréé",
+          "Retour : enveloppe prépayée (USPS, UPS ou FedEx)"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=NER",
+          "https://embassyofniger-usa.org/services-aux-nigeriens/"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": false
+      }
+    },
+    {
+      "iso2": "CF",
+      "name_fr": "République centrafricaine",
+      "visa_required": true,
+      "embassy": {
+        "name": "Ambassade de la République centrafricaine à Washington (aucune au Canada)",
+        "address": "2704 Ontario Road NW, Washington, DC 20009, États-Unis",
+        "phone": "+1 202-483-7800",
+        "website": "https://www.usrcaembassy.org",
+        "procedures": [
+          "Passeport : en personne à Washington, sur rendez-vous (couvre les résidents du Canada)",
+          "Délai : 6 à 8 semaines (traitement à Bangui)"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=CAF",
+          "https://www.usrcaembassy.org/services/passport"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": true
+      }
+    },
+    {
+      "iso2": "CD",
+      "name_fr": "République démocratique du Congo",
+      "visa_required": true,
+      "embassy": {
+        "name": "Ambassade de la RD Congo au Canada",
+        "address": "18, chemin Range, Ottawa (Ontario) K1N 8J3",
+        "phone": "+1 613-230-6582",
+        "procedures": [
+          "Horaires : lundi au vendredi 10 h – 14 h (à confirmer)",
+          "Démarches passeport : appeler l'ambassade"
+        ],
+        "sources": [],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": true
+      }
+    },
+    {
+      "iso2": "RW",
+      "name_fr": "Rwanda",
+      "visa_required": true,
+      "embassy": {
+        "name": "Haut-commissariat du Rwanda au Canada",
+        "address": "294, rue Albert, bureau 404, Ottawa (Ontario) K1P 6E6",
+        "phone": "+1 613-569-5420",
+        "website": "https://www.rwandaincanada.gov.rw",
+        "procedures": [
+          "Passeport électronique : demande en ligne sur Irembo, puis rendez-vous pour la biométrie",
+          "Biométrie passeport : mardi et mercredi, sur rendez-vous",
+          "Retour par la poste : étiquette prépayée à envoyer avant le rendez-vous",
+          "Délai : 2 à 3 semaines après la biométrie",
+          "Conseil de l'ambassade : renouveler au moins 6 mois avant l'expiration"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=RWA",
+          "https://www.rwandaincanada.gov.rw/services/service-details/cnd-e-passport",
+          "https://www.rwandaincanada.gov.rw/services/service-details/booking-appointments"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": false
+      }
+    },
+    {
+      "iso2": "SN",
+      "name_fr": "Sénégal",
+      "visa_required": true,
+      "embassy": {
+        "name": "Ambassade du Sénégal au Canada",
+        "address": "381, rue Kent, 4e étage, Ottawa (Ontario) K2P 2A8",
+        "phone": "+1 613-238-6392",
+        "website": "https://www.ambsencanada.org",
+        "procedures": [
+          "Passeport : sur rendez-vous en ligne (site de l'ambassade)",
+          "Production à Dakar par lots : le service peut être suspendu quelques semaines"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=SEN",
+          "https://www.ambsencanada.org/consulaire/passeports"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": true
+      }
+    },
+    {
+      "iso2": "CH",
+      "name_fr": "Suisse",
+      "visa_required": false,
+      "embassy": {
+        "name": "Ambassade de Suisse au Canada",
+        "address": "5, avenue Marlborough, Ottawa (Ontario) K1N 8E6",
+        "phone": "+1 613-235-1837",
+        "website": "https://www.schweiz-kanada.eda.admin.ch/fr/consulat-general-de-suisse-montreal",
+        "procedures": [
+          "L'ambassade n'a pas de section consulaire : passeports au consulat général de Montréal (ou Vancouver)",
+          "Consulat général à Montréal : +1 514-932-7181",
+          "Passeport : biométrie en personne à la représentation où tu es inscrit"
+        ],
+        "sources": [
+          "https://www.eda.admin.ch/eda/en/fdfa/representations-and-travel-advice/canada/ch-representation-canada.html",
+          "https://www.schweiz-kanada.eda.admin.ch/fr/consulat-general-de-suisse-montreal"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": false
+      }
+    },
+    {
+      "iso2": "TD",
+      "name_fr": "Tchad",
+      "visa_required": true,
+      "embassy": {
+        "name": "Ambassade du Tchad au Canada",
+        "address": "350, rue Sparks, bureau 802, Ottawa (Ontario) K1R 7S8",
+        "phone": "+1 613-680-3322",
+        "website": "https://chadembassy.ca",
+        "procedures": [
+          "Services consulaires : sur rendez-vous seulement (formulaire en ligne)",
+          "Section consulaire : lundi au vendredi 9 h – 13 h",
+          "Démarches passeport : appeler la section consulaire",
+          "Fermée les jours fériés canadiens et tchadiens"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=TCD",
+          "https://chadembassy.ca/",
+          "https://chadembassy.ca/contact-us/"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": true
+      }
+    },
+    {
+      "iso2": "TG",
+      "name_fr": "Togo",
+      "visa_required": true,
+      "embassy": {
+        "name": "Haut-commissariat du Togo au Canada",
+        "address": "12, chemin Range, Ottawa (Ontario) K1N 8J3",
+        "phone": "+1 613-238-5916",
+        "procedures": [
+          "Accueil : sur rendez-vous",
+          "Démarches passeport : à confirmer auprès du Haut-commissariat"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=TGO"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": true
+      }
+    },
+    {
+      "iso2": "TN",
+      "name_fr": "Tunisie",
+      "visa_required": true,
+      "embassy": {
+        "name": "Ambassade de Tunisie au Canada",
+        "address": "515, rue O'Connor, Ottawa (Ontario) K1S 3P8",
+        "phone": "+1 613-237-0330",
+        "procedures": [
+          "Consulat à Montréal : 1255, boul. Robert-Bourassa, bureau 702 ; +1 514-844-6909",
+          "Passeport : dossier possible par la poste (paiement par mandat ou chèque certifié)",
+          "Adultes : retrait du passeport en personne"
+        ],
+        "sources": [
+          "https://www.mrif.gouv.qc.ca/fr/protocole/repertoire/representations?pays=TUN",
+          "http://consulat-tunisie.ca/index.php/passeport/"
+        ],
+        "verified_on": "2026-11-21",
+        "to_verify_on_official_site": true
+      }
+    }
+  ]
+}
