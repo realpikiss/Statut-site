@@ -3,71 +3,75 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Confidentialité — Statut</title>
-<meta name="description" content="Statut ne sait rien de toi : tes informations d'immigration restent sur ton iPhone. Pas de compte, pas de pub, pas de traceur.">
-<meta name="theme-color" content="#0E6E5C">
+<title>Politique de confidentialité — Statut</title>
+<meta name="description" content="Politique de confidentialité de l'app Statut : aucune donnée personnelle collectée, tout reste sur ton iPhone.">
 <style>
-  :root{--bg:#F5F5F7;--card:#FFFFFF;--ink:#0B0B0C;--ink2:#3C3C43;--muted:#62626A;--line:#E3E3E8;--accent:#0E6E5C;--accent-soft:#E3F1EE;
+  :root{--bg:#FFFFFF;--ink:#1D1D1F;--ink2:#424245;--muted:#6E6E73;--line:#E5E5EA;--accent:#0E6E5C;
     --font:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,"Segoe UI",Roboto,sans-serif}
-  @media (prefers-color-scheme:dark){:root{--bg:#0C0C0E;--card:#1C1C1E;--ink:#F5F5F7;--ink2:#D1D1D6;--muted:#A1A1AA;--line:#2C2C2E;--accent:#34B39A;--accent-soft:#12302A}}
+  @media (prefers-color-scheme:dark){:root{--bg:#000000;--ink:#F5F5F7;--ink2:#D2D2D7;--muted:#98989D;--line:#2C2C2E;--accent:#34B39A}}
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.55;-webkit-font-smoothing:antialiased}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
   a{color:var(--accent)}
-  .wrap{max-width:760px;margin:0 auto;padding:0 16px}
-  @media (min-width:640px){.wrap{padding:0 24px}}
-  header{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.4px;color:var(--ink);text-decoration:none}
-  .logo{width:30px;height:30px;border-radius:8px;background:#0E6E5C;display:grid;place-items:center}
-  .back{font-size:14px;font-weight:600;text-decoration:none}
-  h1{font-size:clamp(34px,6vw,48px);letter-spacing:-.04em;line-height:1.05;margin:32px 0 10px}
-  .date{color:var(--muted);font-size:14px;margin:0 0 20px}
-  .promise{background:var(--accent-soft);border-radius:22px;padding:20px 22px;font-size:18px;font-weight:600;margin:0 0 32px}
-  .group{font-size:13px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin:36px 0 10px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden}
-  .item{padding:18px 22px}
-  .item+.item{border-top:1px solid var(--line)}
-  .item h2{font-size:17px;margin:0 0 4px;letter-spacing:-.2px}
-  .item p{margin:0;color:var(--ink2)}
-  footer{padding:40px 0 48px;font-size:13px;color:var(--muted);text-align:center}
+  .wrap{max-width:680px;margin:0 auto;padding:0 20px}
+  nav{display:flex;justify-content:space-between;align-items:center;height:56px;font-size:15px;border-bottom:1px solid var(--line)}
+  nav .home{color:var(--ink);font-weight:600;text-decoration:none}
+  nav .lang{text-decoration:none}
+  h1{font-size:34px;line-height:1.15;letter-spacing:-.02em;margin:40px 0 6px}
+  .date{color:var(--muted);font-size:15px;margin:0 0 28px}
+  h2{font-size:21px;letter-spacing:-.01em;margin:36px 0 8px}
+  h3{font-size:17px;margin:20px 0 4px}
+  p,li{color:var(--ink2)}
+  p{margin:0 0 12px}
+  ul{margin:0 0 12px;padding-left:22px}
+  li{margin:4px 0}
+  footer{margin:48px 0 40px;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <a class="brand" href="index.html">
-      <span class="logo" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="3.5" fill="#fff"/><path d="M8.5 12.2l2.4 2.4 4.6-5" stroke="#0E6E5C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      Statut
-    </a>
-    <a class="back" href="index.html">← Accueil</a>
-  </header>
-
+  <nav><a class="home" href="index.html">Statut</a><a class="lang" href="privacy.html" hreflang="en">English</a></nav>
   <main>
-    <h1>Confidentialité</h1>
-    <p class="date">Mise à jour le 21 novembre 2026</p>
-    <p class="promise">Statut est construit pour ne rien savoir de toi. Tes informations d'immigration restent sur ton iPhone.</p>
+    <h1>Politique de confidentialité</h1>
+    <p class="date">En vigueur le 24 novembre 2026</p>
 
-    <div class="group">L'app iPhone</div>
-    <div class="card">
-      <div class="item"><h2>Tes données restent sur ton iPhone</h2><p>Ton profil (statut, pays du passeport, établissement, province) et les dates de tes documents sont enregistrés uniquement sur ton iPhone, chiffrés par iOS quand l'appareil est verrouillé. Pas de compte, pas de serveur qui reçoit ces informations.</p></div>
-      <div class="item"><h2>Ce que Statut n'enregistre jamais</h2><p>Aucun numéro de permis, de passeport ou de NAS. Aucune photo : quand tu scannes un document, l'image est lue sur l'iPhone pour trouver la date, puis elle est oubliée.</p></div>
-      <div class="item"><h2>Aucun suivi</h2><p>Gratuit, sans publicité, sans traceur, sans outil d'analyse d'un tiers.</p></div>
-      <div class="item"><h2>Rappels</h2><p>Des notifications locales, programmées sur ton iPhone. Avec les « Rappels discrets », le nom du document et la date n'apparaissent pas sur l'écran verrouillé.</p></div>
-      <div class="item"><h2>Mise à jour des règles</h2><p>Une fois par jour au plus, Statut télécharge depuis ce site (hébergé par GitHub Pages) les règles publiques : délais, pays, ambassades, établissements. Rien de ce qui te concerne n'est envoyé ; comme pour toute page web, l'hébergeur voit l'adresse IP de la connexion. Les règles sont signées : l'app refuse toute version qui ne vient pas de Statut.</p></div>
-      <div class="item"><h2>Sauvegardes de l'iPhone</h2><p>Si la sauvegarde iCloud ou sur ordinateur de ton iPhone est activée, les données de Statut en font partie, comme celles de tes autres apps. Cette sauvegarde appartient à ton compte Apple.</p></div>
-      <div class="item"><h2>Tout effacer</h2><p>Dans l'app : Moi, puis Tout supprimer. Ou supprime l'app. C'est immédiat et définitif.</p></div>
-    </div>
+    <h2>En bref</h2>
+    <ul>
+      <li>L'app Statut ne collecte aucune donnée personnelle. Tes informations restent sur ton iPhone.</li>
+      <li>Pas de compte, pas de publicité, pas de traceur, pas d'outil d'analyse.</li>
+      <li>Ce site garde ton courriel seulement si tu t'inscris pour tester l'app.</li>
+    </ul>
 
-    <div class="group">Ce site</div>
-    <div class="card">
-      <div class="item"><h2>L'inscription au test</h2><p>Si tu laisses ton courriel, on garde ton courriel et le type de ton téléphone (iPhone ou Android), seulement pour t'envoyer le lien de l'app et l'annonce du lancement. Ils sont enregistrés dans une feuille Google Sheets privée (Google l'héberge ; nous seuls y avons accès). On ne les vend pas et on ne les partage pas. Pour être retiré·e de la liste, réponds à n'importe lequel de nos courriels ou écris à <a href="mailto:statut.app@icloud.com">statut.app@icloud.com</a>.</p></div>
-      <div class="item"><h2>Ce site ne te suit pas</h2><p>Pas de témoin publicitaire, pas d'outil de mesure d'audience, aucune police ni script chargé depuis un autre site. Le formulaire n'envoie quelque chose (à Google) que quand tu appuies sur « Recevoir le lien ».</p></div>
-    </div>
-    <div class="group">Contact</div>
-    <div class="card">
-      <div class="item"><h2>Une question, une erreur ?</h2><p>Écris à <a href="mailto:statut.app@icloud.com">statut.app@icloud.com</a>.</p></div>
-    </div>
+    <h2>L'app Statut</h2>
+    <h3>Ce qui est enregistré, et où</h3>
+    <p>Ton profil (statut, pays du passeport, établissement, province) et les dates de tes documents. Ils sont enregistrés uniquement sur ton iPhone et chiffrés par iOS quand l'appareil est verrouillé. Aucun serveur ne les reçoit.</p>
+    <h3>Ce qui n'est jamais demandé</h3>
+    <p>Aucun numéro de permis, de passeport ou de NAS : seulement des dates. Quand tu scannes un document, la photo est lue sur l'iPhone pour trouver la date, puis elle est oubliée. Elle n'est ni enregistrée ni envoyée.</p>
+    <h3>Rappels</h3>
+    <p>Ce sont des notifications locales, programmées sur ton iPhone. Avec les « Rappels discrets », le nom du document et la date n'apparaissent pas sur l'écran verrouillé.</p>
+    <h3>Mise à jour des règles</h3>
+    <p>Une fois par jour au plus, l'app télécharge depuis ce site les règles publiques (délais, pays, ambassades, établissements). Aucune information te concernant n'est envoyée. Comme pour toute page web, l'hébergeur voit l'adresse IP de la connexion. Les fichiers sont signés : l'app refuse toute version qui ne vient pas de Statut.</p>
+    <h3>Sauvegardes</h3>
+    <p>Si la sauvegarde iCloud ou sur ordinateur de ton iPhone est activée, les données de Statut en font partie, comme celles de tes autres apps. Cette sauvegarde est liée à ton compte Apple, pas à Statut.</p>
+    <h3>Supprimer tes données</h3>
+    <p>Dans l'app : Réglages, puis Tout supprimer. Ou supprime l'app. L'effacement est immédiat et définitif.</p>
+
+    <h2>Ce site</h2>
+    <p>Si tu t'inscris pour tester l'app, on garde ton courriel et le type de ton téléphone (iPhone ou Android), seulement pour t'envoyer le lien de l'app et l'annonce du lancement. On ne les vend pas et on ne les partage pas. Pour être retiré·e de la liste, réponds à l'un de nos courriels ou écris à <a href="mailto:statut.app@icloud.com">statut.app@icloud.com</a>.</p>
+    <p>Le site n'utilise ni témoin publicitaire ni mesure d'audience, et ne charge aucune police ni aucun script depuis un autre site.</p>
+
+    <h2>Services tiers</h2>
+    <ul>
+      <li><strong>GitHub Pages</strong> héberge ce site et les fichiers de règles.</li>
+      <li><strong>Google Sheets</strong> conserve la liste des inscriptions au test, dans une feuille privée.</li>
+      <li><strong>Apple</strong> distribue l'app (App Store, TestFlight) selon ses propres règles de confidentialité.</li>
+    </ul>
+
+    <h2>Changements</h2>
+    <p>Si cette politique change, la nouvelle version est publiée sur cette page avec sa date d'entrée en vigueur.</p>
+
+    <h2>Contact</h2>
+    <p>Pour toute question : <a href="mailto:statut.app@icloud.com">statut.app@icloud.com</a>.</p>
   </main>
-
   <footer>Statut est une app indépendante, non affiliée à IRCC ni au gouvernement du Canada. Outil d'organisation, pas un avis juridique.</footer>
 </div>
 </body>
