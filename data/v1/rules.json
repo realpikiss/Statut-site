@@ -26,7 +26,7 @@
     },
     "passport_renewal_lead_days": {
       "value": 365,
-      "source": "https://studentstest.usask.ca/international/passport.php",
+      "source": "https://students.usask.ca/international/passport.php",
       "kind": "conseil"
     },
     "nb_student_medicare_min_months": {
